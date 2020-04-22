@@ -325,15 +325,15 @@ class ProfilePage extends React.Component {
               </Row>
             </Container>
           </div>
-          {/* <div className="section">
+           <div className="section">
             <Container>
-              <Row className="justify-content-between">
+              <Row className="justify-content-md-center">
                 <Col md="6">
                   <Row className="justify-content-between align-items-center">
                     <UncontrolledCarousel items={carouselItems} />
                   </Row>
                 </Col>
-                <Col md="5">
+                {/* <Col md="5">
                   <h1 className="profile-title text-left">Projects</h1>
                   <h5 className="text-on-back">02</h5>
                   <p className="profile-description text-left">
@@ -361,11 +361,11 @@ class ProfilePage extends React.Component {
                       <i className="tim-icons icon-bulb-63" /> Check it!
                     </Button>
                   </div>
-                </Col>
+                </Col> */}
               </Row>
             </Container>
           </div>
-          <section className="section">
+          {/* <section className="section">
             <Container>
               <Row>
                 <Col md="6">
