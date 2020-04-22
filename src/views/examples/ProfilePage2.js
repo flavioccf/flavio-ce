@@ -16,7 +16,7 @@
 
 */
 import React from "react";
-// import classnames from "classnames";
+import classnames from "classnames";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
 // reactstrap components
@@ -30,9 +30,9 @@ import {
   Form,
   Input,
   FormText,
-  // NavItem,
-  // NavLink,
-  // Nav,
+  NavItem,
+  NavLink,
+  Nav,
   Table,
   TabContent,
   TabPane,
@@ -44,24 +44,24 @@ import {
 } from "reactstrap";
 
 // core components
-// import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-// import Footer from "components/Footer/Footer.js";
+import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import Footer from "components/Footer/Footer.js";
 
 const carouselItems = [
   {
-    src: require("assets/img/1.png"),
+    src: require("assets/img/denys.jpg"),
     altText: "Slide 1",
-    caption: "Início da carreira"
+    caption: "Big City Life, United States"
   },
   {
-    src: require("assets/img/2.png"),
+    src: require("assets/img/fabien-bazanegue.jpg"),
     altText: "Slide 2",
-    caption: "Flávio e Sílvio Santos"
+    caption: "Somewhere Beyond, United States"
   },
   {
-    src: require("assets/img/3.png"),
+    src: require("assets/img/mark-finn.jpg"),
     altText: "Slide 3",
-    caption: "Flávio Chão de Estrelas"
+    caption: "Stocks, United States"
   }
 ];
 
@@ -102,7 +102,9 @@ class ProfilePage extends React.Component {
   render() {
     return (
       <>
-          <div>
+        <ExamplesNavbar />
+        <div className="wrapper">
+          <div className="page-header">
             <img
               alt="..."
               className="dots"
@@ -114,28 +116,17 @@ class ProfilePage extends React.Component {
               src={require("assets/img/path4.png")}
             />
             <Container className="align-items-center">
-            <Row>
-                <Col lg="12" md="12">
-            <h3>Assista Agora!</h3>
-            </Col>
-            <Col lg="12" md="12">
-            <iframe style={{width: 100+"%",height: 60+"vh", marginBottom: 6+"em"}} src="https://www.youtube.com/embed/9wc3CVxaGfQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <hr></hr>
-            </Col>
-            </Row>
-            </Container>
-            <Container className="align-items-center">
               <Row>
                 <Col lg="6" md="6">
-                  <h1 className="profile-title text-left">Flávio Chão de Estrelas</h1>
-                  <h5 className="text-on-back">FCE</h5>
+                  <h1 className="profile-title text-left">Mike Scheinder</h1>
+                  <h5 className="text-on-back">01</h5>
                   <p className="profile-description">
-                  <br></br>
-                  Cantor, compositor, apresentador de TV e radialista. Estarei neste canal divulgando meus movimentos no segmento artístico bem como assuntos pertinentes a esse mercado da música e do entetrenimento.
-                  <br></br>
-                  Obrigado a cada um que me acompanha nesta caminhada!
+                    Offices parties lasting outward nothing age few resolve.
+                    Impression to discretion understood to we interested he
+                    excellence. Him remarkably use projection collecting. Going
+                    about eat forty world has round miles.
                   </p>
-                  {/* <div className="btn-wrapper profile pt-3">
+                  <div className="btn-wrapper profile pt-3">
                     <Button
                       className="btn-icon btn-round"
                       color="twitter"
@@ -172,7 +163,7 @@ class ProfilePage extends React.Component {
                     <UncontrolledTooltip delay={0} target="tooltip951161185">
                       Follow us
                     </UncontrolledTooltip>
-                  </div> */}
+                  </div>
                 </Col>
                 <Col className="ml-auto mr-auto" lg="4" md="6">
                   <Card className="card-coin card-plain">
@@ -180,12 +171,12 @@ class ProfilePage extends React.Component {
                       <img
                         alt="..."
                         className="img-center img-fluid rounded-circle"
-                        src={require("assets/img/flavio-ce.webp")}
+                        src={require("assets/img/mike.jpg")}
                       />
-                      <h4 className="title">Trajetória</h4>
+                      <h4 className="title">Transactions</h4>
                     </CardHeader>
                     <CardBody>
-                      {/* <Nav
+                      <Nav
                         className="nav-tabs-primary justify-content-center"
                         tabs
                       >
@@ -197,7 +188,7 @@ class ProfilePage extends React.Component {
                             onClick={e => this.toggleTabs(e, "tabs", 1)}
                             href="#pablo"
                           >
-                            2020
+                            Wallet
                           </NavLink>
                         </NavItem>
                         <NavItem>
@@ -208,7 +199,7 @@ class ProfilePage extends React.Component {
                             onClick={e => this.toggleTabs(e, "tabs", 2)}
                             href="#pablo"
                           >
-                            90 ~ 2000
+                            Send
                           </NavLink>
                         </NavItem>
                         <NavItem>
@@ -219,10 +210,10 @@ class ProfilePage extends React.Component {
                             onClick={e => this.toggleTabs(e, "tabs", 3)}
                             href="#pablo"
                           >
-                            70 ~ 90
+                            News
                           </NavLink>
                         </NavItem>
-                      </Nav> */}
+                      </Nav>
                       <TabContent
                         className="tab-subcategories"
                         activeTab={"tab" + this.state.tabs}
@@ -231,38 +222,26 @@ class ProfilePage extends React.Component {
                           <Table className="tablesorter" responsive>
                             <thead className="text-primary">
                               <tr>
-                                <th className="header">ANO</th>
-                                <th className="header"></th>
+                                <th className="header">COIN</th>
+                                <th className="header">AMOUNT</th>
+                                <th className="header">VALUE</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td>2020</td>
-                                <td><strong>Tudo vai passar</strong> é lançada</td>
+                                <td>BTC</td>
+                                <td>7.342</td>
+                                <td>48,870.75 USD</td>
                               </tr>
                               <tr>
-                                <td>199~</td>
-                                <td>Estréia o programa <strong>Chão de Estrelas</strong> na TVB (afiliada a Rede SBT), que perman no ar por 12 anos ininterruptos</td>
+                                <td>ETH</td>
+                                <td>30.737</td>
+                                <td>64,53.30 USD</td>
                               </tr>
                               <tr>
-                                <td>19~</td>
-                                <td>Produtor do programa <strong>Especial Sertenajo</strong> da Rede Record</td>
-                              </tr>
-                              <tr>
-                                <td>19~</td>
-                                <td>Apresentador na Rede Gazeta ao lado de Helô Pinheiro</td>
-                              </tr>
-                              <tr>
-                                <td>1985</td>
-                                <td>Estréia como ator em <strong>Caso verdade</strong> da Rede Globo</td>
-                              </tr>
-                              <tr>
-                                <td>1980</td>
-                                <td>Cria a trilha sonora da série <strong>Caso verdade</strong> da Rede Globo</td>
-                              </tr>
-                              <tr>
-                                <td>1976</td>
-                                <td><strong>Nada na cuca</strong> vira tema de novela e ganha o Globo de Ouro</td>
+                                <td>XRP</td>
+                                <td>19.242</td>
+                                <td>18,354.96 USD</td>
                               </tr>
                             </tbody>
                           </Table>
@@ -325,7 +304,7 @@ class ProfilePage extends React.Component {
               </Row>
             </Container>
           </div>
-          {/* <div className="section">
+          <div className="section">
             <Container>
               <Row className="justify-content-between">
                 <Col md="6">
@@ -466,7 +445,8 @@ class ProfilePage extends React.Component {
               </Row>
             </Container>
           </section>
-       */}
+          <Footer />
+        </div>
       </>
     );
   }

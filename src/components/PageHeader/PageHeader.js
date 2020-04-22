@@ -35,7 +35,7 @@ class PageHeader extends React.Component {
           <div className="content-center brand">
             <h1 className="h1-seo">Flávio Chão de Estrelas</h1>
             <h3 className="d-none d-sm-block">
-              Confira o novo single <strong>Tudo vai passar</strong> nos principais canais
+              Confira o novo single <strong>Tudo vai passar</strong> nas principais plataformas!
             </h3>
           </div>
         </Container>

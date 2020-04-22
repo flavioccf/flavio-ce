@@ -24,7 +24,6 @@ import Footer from "components/Footer/Footer.js";
 
 // sections for this page/view
 import Basics from "views/IndexSections/Basics.js";
-import Profile from "views/examples/ProfilePage.js";
 import Navbars from "views/IndexSections/Navbars.js";
 import Tabs from "views/IndexSections/Tabs.js";
 import Pagination from "views/IndexSections/Pagination.js";
@@ -49,18 +48,18 @@ class Index extends React.Component {
         <IndexNavbar />
         <div className="wrapper">
           <PageHeader />
-          <Profile />
           <div className="main">
-            {/* <Navbars />
+            <Basics />
+            <Navbars />
             <Tabs />
             <Pagination />
             <Notifications />
             <Typography />
             <JavaScript />
-            <NucleoIcons /> */}
+            <NucleoIcons />
             <Signup />
-            {/* <Examples />
-            <Download /> */}
+            <Examples />
+            <Download />
           </div>
           <Footer />
         </div>

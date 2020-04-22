@@ -52,31 +52,28 @@ class Signup extends React.Component {
           <Row className="row-grid justify-content-between align-items-center">
             <Col lg="6">
               <h3 className="display-3 text-white">
-                A beautiful Black Design{" "}
-                <span className="text-white">completed with examples</span>
+                Newsletter{" "}
+                <span className="text-white"></span>
               </h3>
               <p className="text-white mb-3">
-                The Design System comes with four pre-built pages to help you
-                get started faster. You can change the text and images and
-                you're good to go. More importantly, looking at them will give
-                you a picture of what you can built with this powerful Bootstrap
-                4 Design System.
+              Venha acompanhar o meu trabalho mais de perto.
+              <br></br>Preencha o formulário abaixo com seu email para novidades e futuras promoções!
               </p>
-              <div className="btn-wrapper">
+              {/* <div className="btn-wrapper">
                 <Button color="primary" to="register-page" tag={Link}>
                   Register Page
                 </Button>
-              </div>
+              </div> */}
             </Col>
             <Col className="mb-lg-auto" lg="6">
               <Card className="card-register">
-                <CardHeader>
+                {/* <CardHeader>
                   <CardImg
                     alt="..."
                     src={require("assets/img/square-purple-1.png")}
                   />
-                  <CardTitle tag="h4">Register</CardTitle>
-                </CardHeader>
+                  <CardTitle tag="h6" className="text-white"></CardTitle>
+                </CardHeader> */}
                 <CardBody>
                   <Form className="form">
                     <InputGroup
@@ -90,7 +87,7 @@ class Signup extends React.Component {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Full Name"
+                        placeholder="Nome"
                         type="text"
                         onFocus={e => this.setState({ fullNameFocus: true })}
                         onBlur={e => this.setState({ fullNameFocus: false })}
@@ -107,13 +104,13 @@ class Signup extends React.Component {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Email"
+                        placeholder="E-mail"
                         type="text"
                         onFocus={e => this.setState({ emailFocus: true })}
                         onBlur={e => this.setState({ emailFocus: false })}
                       />
                     </InputGroup>
-                    <InputGroup
+                    {/* <InputGroup
                       className={classnames({
                         "input-group-focus": this.state.passwordFocus
                       })}
@@ -129,13 +126,13 @@ class Signup extends React.Component {
                         onFocus={e => this.setState({ passwordFocus: true })}
                         onBlur={e => this.setState({ passwordFocus: false })}
                       />
-                    </InputGroup>
+                    </InputGroup> */}
                     <FormGroup check className="text-left">
                       <Label check>
                         <Input type="checkbox" />
-                        <span className="form-check-sign" />I agree to the{" "}
+                        <span className="form-check-sign" />Eu concordo com a {" "}
                         <a href="#pablo" onClick={e => e.preventDefault()}>
-                          terms and conditions
+                          política de privacidade
                         </a>
                         .
                       </Label>
@@ -144,7 +141,7 @@ class Signup extends React.Component {
                 </CardBody>
                 <CardFooter>
                   <Button className="btn-round" color="primary" size="lg">
-                    Get Started
+                    Inscrever
                   </Button>
                 </CardFooter>
               </Card>

@@ -17,6 +17,11 @@
 */
 import React from "react";
 import { Link } from "react-router-dom";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter, faInstagram, faFacebook, faYoutube, faSpotify } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 // reactstrap components
 import {
   Button,
@@ -36,9 +41,9 @@ class Footer extends React.Component {
         <Container>
           <Row>
             <Col md="3">
-              <h1 className="title">BLK•</h1>
+              <h1 className="title">• FCE •</h1>
             </Col>
-            <Col md="3">
+            {/* <Col md="3">
               <Nav>
                 <NavItem>
                   <NavLink to="/" tag={Link}>
@@ -61,8 +66,8 @@ class Footer extends React.Component {
                   </NavLink>
                 </NavItem>
               </Nav>
-            </Col>
-            <Col md="3">
+            </Col> */}
+            {/* <Col md="3">
               <Nav>
                 <NavItem>
                   <NavLink href="https://creative-tim.com/contact-us?ref=blkdsr-footer">
@@ -85,45 +90,48 @@ class Footer extends React.Component {
                   </NavLink>
                 </NavItem>
               </Nav>
-            </Col>
+            </Col> */}
             <Col md="3">
-              <h3 className="title">Follow us:</h3>
+              <h3 className="title">Siga:</h3>
               <div className="btn-wrapper profile">
                 <Button
-                  className="btn-icon btn-neutral btn-round btn-simple"
+                  style={{ fontSize:2+"em" }}
+                  className=""
                   color="default"
                   href="https://twitter.com/creativetim"
                   id="tooltip622135962"
                   target="_blank"
                 >
-                  <i className="fab fa-twitter" />
+                  <FontAwesomeIcon icon={faSpotify} />
                 </Button>
                 <UncontrolledTooltip delay={0} target="tooltip622135962">
-                  Follow us
+                  Siga
                 </UncontrolledTooltip>
                 <Button
-                  className="btn-icon btn-neutral btn-round btn-simple"
+                  style={{ fontSize:2+"em" }}
+                  className=""
                   color="default"
                   href="https://www.facebook.com/creativetim"
                   id="tooltip230450801"
                   target="_blank"
                 >
-                  <i className="fab fa-facebook-square" />
+                  <FontAwesomeIcon icon={faYoutube} />
                 </Button>
                 <UncontrolledTooltip delay={0} target="tooltip230450801">
-                  Like us
+                  Siga
                 </UncontrolledTooltip>
                 <Button
-                  className="btn-icon btn-neutral btn-round btn-simple"
+                  style={{ fontSize:2+"em" }}
+                  className=""
                   color="default"
                   href="https://dribbble.com/creativetim"
                   id="tooltip318450378"
                   target="_blank"
                 >
-                  <i className="fab fa-dribbble" />
+                  <FontAwesomeIcon icon={faInstagram} />
                 </Button>
                 <UncontrolledTooltip delay={0} target="tooltip318450378">
-                  Follow us
+                  Siga
                 </UncontrolledTooltip>
               </div>
             </Col>

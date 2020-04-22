@@ -17,11 +17,6 @@
 */
 import React from "react";
 import { Link } from "react-router-dom";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { faTwitter, faInstagram, faFacebook, faYoutube, faSpotify } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 // reactstrap components
 import {
   Button,
@@ -40,8 +35,6 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
-
-library.add(fas, faInstagram);
 
 class ComponentsNavbar extends React.Component {
   constructor(props) {
@@ -153,52 +146,40 @@ class ComponentsNavbar extends React.Component {
               <NavItem className="p-0">
                 <NavLink
                   data-placement="bottom"
-                  href="https://open.spotify.com/album/3PhnUOSuSKNCFrorxttH31"
+                  href="https://twitter.com/CreativeTim"
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Follow us on Twitter"
                 >
-                  <FontAwesomeIcon className="d-lg-none d-xl-none" icon={faSpotify} />
-                  <p className="d-lg-none d-xl-none">Spotify</p>
+                  <i className="fab fa-twitter" />
+                  <p className="d-lg-none d-xl-none">Twitter</p>
                 </NavLink>
               </NavItem>
               <NavItem className="p-0">
                 <NavLink
                   data-placement="bottom"
-                  href="https://www.youtube.com/watch?v=9wc3CVxaGfQ"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Follow us on Twitter"
-                >
-                  <FontAwesomeIcon className="d-lg-none d-xl-none" icon={faYoutube} />
-                  <p className="d-lg-none d-xl-none">YouTube</p>
-                </NavLink>
-              </NavItem>
-              <NavItem className="p-0">
-                <NavLink
-                  data-placement="bottom"
-                  href="https://www.facebook.com/flaviochaodeestrelas"
+                  href="https://www.facebook.com/CreativeTim"
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Like us on Facebook"
                 >
-                  <FontAwesomeIcon className="d-lg-none d-xl-none" icon={faFacebook} />
+                  <i className="fab fa-facebook-square" />
                   <p className="d-lg-none d-xl-none">Facebook</p>
                 </NavLink>
               </NavItem>
               <NavItem className="p-0">
                 <NavLink
                   data-placement="bottom"
-                  href="https://www.instagram.com/flaviochaodeestrelas"
+                  href="https://www.instagram.com/CreativeTimOfficial"
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Follow us on Instagram"
                 >
-                  <FontAwesomeIcon className="d-lg-none d-xl-none" icon={faInstagram} />
+                  <i className="fab fa-instagram" />
                   <p className="d-lg-none d-xl-none">Instagram</p>
                 </NavLink>
               </NavItem>
-              {/* <UncontrolledDropdown nav>
+              <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
                   color="default"
@@ -228,58 +209,18 @@ class ComponentsNavbar extends React.Component {
                     Profile Page
                   </DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown> */}
+              </UncontrolledDropdown>
               <NavItem>
-               <Button
-                 className="nav-link d-none d-lg-block"
-                 color="success"
-                 target="_blank"
-                 href="https://open.spotify.com/album/3PhnUOSuSKNCFrorxttH31"
-               >
-                 <FontAwesomeIcon icon={faSpotify} /> Spotify
-               </Button>
-             </NavItem>
-             <NavItem>
-               <Button
-                 className="nav-link d-none d-lg-block"
-                 color="danger"
-                 target="_blank"
-                 href="https://www.youtube.com/watch?v=9wc3CVxaGfQ"
-               >
-                 <FontAwesomeIcon icon={faYoutube} /> YouTube
-               </Button>
-             </NavItem>
-             <NavItem>
-               <Button
-                 className="nav-link d-none d-lg-block"
-                 color="info"
-                 target="_blank"
-                 href="https://www.facebook.com/flaviochaodeestrelas"
-               >
-                 <FontAwesomeIcon icon={faFacebook} /> Facebook
-               </Button>
-             </NavItem>
-             <NavItem>
                <Button
                  className="nav-link d-none d-lg-block"
                  color="primary"
                  target="_blank"
-                 href="https://www.instagram.com/flaviochaodeestrelas"
-               >
-                 <FontAwesomeIcon icon={faInstagram} /> Instagram
-               </Button>
-             </NavItem>
-             {/* <NavItem>
-               <Button
-                 className="nav-link d-none d-lg-block"
-                 color=""
-                 target="_blank"
                  href="https://www.creative-tim.com/product/blk-design-system-pro-react?ref=bdsr-user-archive-index-navbar-upgrade-pro"
                >
-                 <FontAwesomeIcon icon={faTwitter} /> Twitter
+                 <i className="tim-icons icon-spaceship" /> Upgrade to PRO
                </Button>
-             </NavItem> */}
-              {/* <NavItem>
+             </NavItem>
+              <NavItem>
                 <Button
                   className="nav-link d-none d-lg-block"
                   color="default"
@@ -287,7 +228,7 @@ class ComponentsNavbar extends React.Component {
                 >
                   <i className="tim-icons icon-cloud-download-93" /> Download
                 </Button>
-              </NavItem> */}
+              </NavItem>
             </Nav>
           </Collapse>
         </Container>
